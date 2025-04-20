@@ -1,17 +1,22 @@
 research_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
+    Research the provided topic of {topic} to gather the most important information that will 
+    be useful in creating a report outline. Ensure you focus on high-quality, reliable sources.
+
+    Here is some additional information about the author's desired goal for the report:\n\n {goal}
   expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
+    A set of key points and important information about {topic} that will be used to create the outline.
   agent: researcher
 
 reporting_task:
   description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Create a report outline with sections in sequential order based on the research findings. 
+    Ensure that each section has a title and a brief description that highlights the topics and subtopics to be covered.
+    It's important to note that each section is only going to be {section_length} words or less and should be limited to only {section_count} setions.
+    Also, make sure that you do not duplicate any sections or topics in the outline.
+
+    Here is some additional information about the author's desired goal for the report:\n\n {goal}
+
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
+    An outline of sections, with titles and descriptions of what each section will contain.
   agent: reporting_analyst
