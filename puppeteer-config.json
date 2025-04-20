@@ -1,1 +1,7 @@
-UPDATE AS PER README.md
+
+{
+    "executablePath": "UPDATE AS PER README.md,
+    "args": [
+        "--no-sandbox"
+    ]
+}
