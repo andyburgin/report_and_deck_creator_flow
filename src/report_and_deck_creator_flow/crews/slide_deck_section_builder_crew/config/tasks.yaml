@@ -1,17 +1,25 @@
-research_task:
+deck_section_writer_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
-  expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+    Using the supplied section text create a series of presentation slides along with presenter notes.
+    The slides should be comprised of a title and summarised points in body text.
+    Adittionaly the slide type should be added by determining if the body text can be best represented as "text", "bullets" or "diagram".
+    The supporting presenter notes should communicate the points on the slide and embelish them in and engaging dialogue, 50 words maximum.
 
-reporting_task:
-  description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+    Here is the topic for the presentation: {topic}
+    Here is the title of the section: {section_title}
+    Here is the outline description for the section:\n\n {section_text}
+
+    Important notes:
+    - There should be no more than 3 slides in a section.
+    - The slides you are writing needs to fit in well with the context of the other sections in the presentation.
+    - Additionally create 5 word title for the section, a 5 word section subtile and one sentence presenter notes for introducing the section
+    - Do not create slides for a summary or conclusion.
+    - For text and bullet slides remove any bullet point formtting or indentation numbering, ensure bullet points are seperated by a newline character.
+    - The summarised points in body text can be bullet points but some slides should be text, only use bullet points when applicable.
+    - If the summary represents a sequence of flow then set the slide type to 'diagram' and set the body text to mermaid format removing ``` and ```mermaid. 
+    
+    Here is the outline of the entire presentation:\n\n
+    {presentation_outline}
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    A list of slides comprised of title, type, body text and supporting presenter notes.
+  agent: deck_section_writer
