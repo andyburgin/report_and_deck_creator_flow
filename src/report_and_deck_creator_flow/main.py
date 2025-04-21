@@ -62,7 +62,6 @@ class ReportDeckFlow(Flow[ReportDeckState]):
     def write_sections(self):
         print("# Flow: Writing Report Sections")
 
-        #section_outline = self.state.report_outline[1]
         for section_outline in self.state.report_outline:
             print("# Flow: Writing Report Section '" + section_outline.title + "'")
 
