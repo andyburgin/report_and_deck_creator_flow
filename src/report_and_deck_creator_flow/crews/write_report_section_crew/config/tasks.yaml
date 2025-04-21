@@ -12,6 +12,7 @@ research_report_section:
     When researching, consider the following key points:
     - you need to gather enough information to write a {section_length} word section
     - The section you are researching needs to fit in well with the rest of the sections in the report.
+    - When using the search tool ensure your query uses the 'search_query' field
 
     Here is the outline of the entire report:
     {report_outline}
