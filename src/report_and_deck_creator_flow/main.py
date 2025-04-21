@@ -96,8 +96,6 @@ class ReportDeckFlow(Flow[ReportDeckState]):
         # compile sections
         report_content = ""
         for section in self.state.report:
-            # Add the section title as an # heading
-            report_content += f"# {section.title}\n\n"
             # Add the section content
             report_content += f"{section.content}\n\n"
     
