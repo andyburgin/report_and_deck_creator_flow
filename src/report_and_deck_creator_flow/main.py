@@ -26,7 +26,7 @@ class ReportDeckState(BaseModel):
         "using mermaid diagrams to enhance software documentation"
     )
     goal: str = """
-        The goal of this report is to provide a comprehensive overview of using mermaid diarams to communicate charts, flows and state trasitions in software documentation.
+        The goal of this report is to provide a comprehensive overview of using mermaid diagrams to communicate charts, flows and state trasitions in software documentation.
     """
     section_count : str = "4"
     section_length: str = "1000"
