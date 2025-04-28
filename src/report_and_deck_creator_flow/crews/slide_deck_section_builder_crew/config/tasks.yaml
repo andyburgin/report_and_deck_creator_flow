@@ -3,7 +3,7 @@ deck_section_writer_task:
     Using the supplied section text create a series of presentation slides along with presenter notes.
     The slides should be comprised of a title and summarised points in body text.
     Adittionaly the slide type should be added by determining if the body text can be best represented as "text", "bullets" or "diagram".
-    The supporting presenter notes should communicate the points on the slide and embelish them in and engaging dialogue, 50 words maximum.
+    The supporting presenter notes should communicate the points on the slide and embelish them in and engaging dialogue, 40 words maximum.
 
     Here is the topic for the presentation: {topic}
     Here is the title of the section: {section_title}

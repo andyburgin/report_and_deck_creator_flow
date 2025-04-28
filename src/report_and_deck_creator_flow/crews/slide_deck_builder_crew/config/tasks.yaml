@@ -5,7 +5,7 @@ deck_writer_task:
     For the introduction slide the title should be engaging and the presenter notes in a single sentence introduce the subject.
     A short paragraph describing for the agenda presenter notes
     The conclusion slide should have a concise title and subtitle with brief conclusing presenter notes.
-    presentation along with presenter notes that are 50 words maximum.
+    presentation along with presenter notes that are 40 words maximum.
 
     Here is the topic for the presentation: {topic}
 
