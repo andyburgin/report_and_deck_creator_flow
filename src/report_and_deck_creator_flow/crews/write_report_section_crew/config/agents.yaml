@@ -1,6 +1,6 @@
 researcher:
   role: >
-    Research Agent
+    Write Report Section Research Agent
   goal: >
     Gather comprehensive information about {topic} and {section_title} that will be used to enhance the content of the section.
     Here is some additional information about the author's desired goal for the report and the section:
@@ -14,7 +14,7 @@ researcher:
 
 writer:
   role: >
-    Report Section Writer
+    Write Report Section Writer
   goal: >
     Write a well-structured section for the report based on the provided section title, goal, and outline.
     The section should be written in markdown format and contain around {section_length} words.

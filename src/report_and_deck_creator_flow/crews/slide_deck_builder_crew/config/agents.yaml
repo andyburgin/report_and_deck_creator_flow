@@ -1,6 +1,6 @@
 deck_writer:
   role: >
-    {topic} slide writer
+    slide deck builder {topic} slide writer
   goal: >
     You can distil the contents of an entire presentation into an introduction and conclusion
   backstory: >

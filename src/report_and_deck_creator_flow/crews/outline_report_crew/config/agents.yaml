@@ -1,6 +1,6 @@
 researcher:
   role: >
-    Senior Data Researcher
+    Outline Report Senior Data Researcher
   goal: >
     Gather comprehensive information about {topic} that will be used to create an organized and well-structured report outline.
     Here is some additional information about the author's desired goal for the report:\n\n {goal}
@@ -10,7 +10,7 @@ researcher:
 
 reporting_analyst:
   role: >
-    {topic} Reporting Analyst
+    Outline Report {topic} Reporting Analyst
   goal: >
     Based on the research, generate a report outline about the following topic: {topic} 
     The generated outline should include all sections in sequential order and provide a title and description for each section.

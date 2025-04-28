@@ -1,6 +1,6 @@
 deck_section_writer:
   role: >
-    {topic} slide writer
+    Slide deck section {topic} slide writer
   goal: >
     You can distil the contents of a section of a presentation into a series of slides and notes 
   backstory: >
