@@ -8,8 +8,8 @@ from report_and_deck_creator_flow.types import ReportSection
 
 
 @CrewBase
-class WriteReportSectionCrew():
-    """WriteReportSectionCrew crew"""
+class ReportSectionBuilderCrew():
+    """ReportSectionBuilderCrew crew"""
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'
     
@@ -45,7 +45,7 @@ class WriteReportSectionCrew():
 
     @crew
     def crew(self) -> Crew:
-        """Creates the WriteReportSectionCrew crew"""
+        """Creates the ReportSectionBuilderCrew crew"""
 
         return Crew(
             agents=self.agents,
