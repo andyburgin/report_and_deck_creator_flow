@@ -9,9 +9,9 @@ from typing import List
 from .types import ReportOutline, ReportSection, ReportSectionOutline, DeckSection, Slide, Deck
 
 from .crews.report_outline_crew.report_outline_crew import ReportOutlineCrew
+from .crews.report_section_builder_crew.report_section_builder_crew import ReportSectionBuilderCrew
 from .crews.slide_deck_intro_outro_crew.slide_deck_intro_outro_crew import SlideDeckIntroOutroCrew
 from .crews.slide_deck_section_builder_crew.slide_deck_section_builder_crew import SlideDeckSectionBuilderCrew
-from .crews.report_section_builder_crew.report_section_builder_crew import ReportSectionBuilderCrew
 
 from  .slides_lib import slides
 
