@@ -8,8 +8,8 @@ from report_and_deck_creator_flow.types import ReportOutline
  
 
 @CrewBase
-class OutlineReportCrew():
-    """OutlineReportCrew crew"""
+class ReportOutlineCrew():
+    """ReportOutlineCrew crew"""
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'
 
@@ -44,7 +44,7 @@ class OutlineReportCrew():
 
     @crew
     def crew(self) -> Crew:
-        """Creates the OutlineReportCrew crew"""
+        """Creates the ReportOutlineCrew crew"""
 
         return Crew(
             agents=self.agents,
