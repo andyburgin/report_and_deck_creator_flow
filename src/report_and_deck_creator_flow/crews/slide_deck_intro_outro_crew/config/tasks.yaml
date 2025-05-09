@@ -1,0 +1,19 @@
+slide_deck_intro_outro_writer_task:
+  description: >
+    Using the supplied title and presentation outline, create an 5 word title for the conclusion slide, 
+    a sub-title for both the introductory slide and the conclusion.
+
+    For the introduction slide the sub title should be engaging, the introduction slide presenter notes ares a single sentence to introduce the subject.
+    Create a short paragraph describing for the agenda presenter notes
+    The conclusion slide should have a concise title and sub-title with brief concluding presenter notes.
+    Presenter notes are 40 words maximum.
+
+    Here is the title of the presentation: {title}
+
+    Here is the topic for the presentation: {topic}
+
+    Here is the outline of the entire presentation:\n\n
+    {presentation_outline}
+  expected_output: >
+    Sub-title and supporting presenter notes for opening slide. Presenter notes summarising the talks content for the agenda. Title, sub-title and supporting presenter notes for the summary slide.
+  agent: slide_deck_intro_outro_writer

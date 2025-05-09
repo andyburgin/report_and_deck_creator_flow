@@ -25,7 +25,6 @@ class DeckSection(BaseModel):
     slides: List[Slide]
 
 class Deck(BaseModel):
-    introduction_title: str
     introduction_subtitle: str
     introduction_presenter_notes: str
     agenda_presenter_notes: str

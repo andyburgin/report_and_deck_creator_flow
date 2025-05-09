@@ -9,7 +9,7 @@ from typing import List
 from .types import ReportOutline, ReportSection, ReportSectionOutline, DeckSection, Slide, Deck
 
 from .crews.outline_report_crew.outline_report_crew import OutlineReportCrew
-from .crews.slide_deck_builder_crew.slide_deck_builder_crew import SlideDeckBuilderCrew
+from .crews.slide_deck_intro_outro_crew.slide_deck_intro_outro_crew import SlideDeckIntroOutroCrew
 from .crews.slide_deck_section_builder_crew.slide_deck_section_builder_crew import SlideDeckSectionBuilderCrew
 from .crews.write_report_section_crew.write_report_section_crew import WriteReportSectionCrew
 
@@ -114,10 +114,11 @@ class ReportDeckFlow(Flow[ReportDeckState]):
         print("# Flow: build_slide_deck")
 
         output = (
-            SlideDeckBuilderCrew()
+            SlideDeckIntroOutroCrew()
             .crew()
             .kickoff(
                 inputs={
+                    "title": self.state.title, 
                     "topic": self.state.topic,
                     "presentation_outline": [
                         section_outline.model_dump_json()
@@ -128,7 +129,6 @@ class ReportDeckFlow(Flow[ReportDeckState]):
         )
 
         self.state.deck = Deck(
-            introduction_title=output["introduction_title"], 
             introduction_subtitle=output["introduction_subtitle"], 
             introduction_presenter_notes=output["introduction_presenter_notes"], 
             agenda_presenter_notes=output["agenda_presenter_notes"], 
@@ -173,14 +173,14 @@ class ReportDeckFlow(Flow[ReportDeckState]):
     def output_slide_deck(self):
         print("# Flow: output_slide_deck")
 
-        print("> TITLE title='"+ self.state.deck.introduction_title+"', subtitle'"+ self.state.deck.introduction_subtitle+"', notes='"+ self.state.deck.introduction_presenter_notes + "'")
-        slides.add_title(self.state.deck.introduction_title, self.state.deck.introduction_subtitle, self.state.deck.introduction_presenter_notes)
+        print("> TITLE title='"+ self.state.title+"', subtitle'"+ self.state.deck.introduction_subtitle+"', notes='"+ self.state.deck.introduction_presenter_notes + "'")
+        slides.add_title(self.state.title, self.state.deck.introduction_subtitle, self.state.deck.introduction_presenter_notes)
 
         agenda_list = ""
         for section in self.state.deck_sections:
             agenda_list = agenda_list + section.section_title + "\n"
-        print("> AGENDA title='"+ self.state.deck.introduction_title + "', notes='"+ self.state.deck.agenda_presenter_notes)
-        slides.add_agenda(self.state.deck.introduction_title,agenda_list, self.state.deck.agenda_presenter_notes)
+        print("> AGENDA title='"+ self.state.title + "', notes='"+ self.state.deck.agenda_presenter_notes)
+        slides.add_agenda(self.state.title, agenda_list, self.state.deck.agenda_presenter_notes)
 
         for section in self.state.deck_sections:
             print("> SECTION title='"+ section.section_title + "', notes='"+ section.section_presenter_notes)
