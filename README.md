@@ -1,6 +1,8 @@
 # report_and_deck_creator_flow
 This repo contains the report and slide deck builder using crewai
 
+![Overview](./doc/overview.png)
+
 ## Setup environment
 ```
 docker run -ti -v ~/Documents/crewai-dev:/git --add-host=host.docker.internal:host-gateway --name crewai-dev python:3.11-bookworm bash
